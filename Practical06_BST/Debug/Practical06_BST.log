@@ -1,0 +1,6 @@
+﻿  BinaryTreeTest.cpp
+c:\users\kepor_000\desktop\practical06_bst\practical06_bst\binarytreeiterator.h(16): warning C4172: returning address of local variable or temporary
+          c:\users\kepor_000\desktop\practical06_bst\practical06_bst\binarytreeiterator.h(14) : while compiling class template member function 'int &BinaryTreeIterator<int>::operator *(void)'
+          c:\users\kepor_000\desktop\practical06_bst\practical06_bst\linkedbinarytree.h(89) : see reference to function template instantiation 'int &BinaryTreeIterator<int>::operator *(void)' being compiled
+          c:\users\kepor_000\desktop\practical06_bst\practical06_bst\binarytreetest.cpp(13) : see reference to class template instantiation 'BinaryTreeIterator<int>' being compiled
+  Practical06_BST.vcxproj -> C:\Users\kepor_000\Desktop\Practical06_BST\Debug\Practical06_BST.exe
