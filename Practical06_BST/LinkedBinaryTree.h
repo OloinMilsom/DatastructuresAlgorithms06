@@ -98,10 +98,12 @@ void LinkedBinaryTree<T, Iterator>::replace(Iterator & position, T element) {
 
 template <typename T, typename Iterator>
 int LinkedBinaryTree<T, Iterator>::depth(Iterator & position) const {
+	// final level recursion, we have reached the root node
 	if (position == m_pRoot) {
 		return 0;
 	}
 	else {
+		// call function again on parent of this node and add one
 		Iterator parentNode = parent(position);
 		return 1 + depth(parentNode);
 	}
@@ -111,6 +113,7 @@ template <typename T, typename Iterator>
 int LinkedBinaryTree<T, Iterator>::nonRecursiveDepth(Iterator & position) const {
 	int result = 0;
 	Iterator current = position;
+	// increment result while we have not yet reached the root
 	while (current != m_pRoot) {
 		result++;
 		current = parent(current);
@@ -212,10 +215,13 @@ Iterator LinkedBinaryTree<T, Iterator>::insertItem(T key, Iterator & iter,
 
 template <typename T, typename Iterator>
 Iterator LinkedBinaryTree<T, Iterator>::treeMinimum(Iterator & x) const{
+	// starting node of our subtree
 	BinaryTreeNode<T> * pNode = x.node();
+	// continue down the left of the sub tree until we find a leaf node
 	while (pNode->leftChild() != nullptr) {
 		pNode = pNode->leftChild().node();
 	}
+	// return the left most node of our subtree
 	return Iterator(pNode);
 }
 

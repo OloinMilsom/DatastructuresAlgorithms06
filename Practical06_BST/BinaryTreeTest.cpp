@@ -25,7 +25,7 @@ int main() {
 
 	BinaryTreeIterator<int> iter = myTree.root();
 	
-	iter.downRight();
+	//iter.downRight();
 	//iter.downRight();
 	//iter.downRight();
 	
